@@ -17,7 +17,6 @@ def test_add_address(app):
 
 def test_add_empty_address(app):
     app.session.Login(username="admin", password="secret")
-    app.Contacts.open_home_page()
     app.Contacts.open_edit_address()
     app.Contacts.add_address(address(' ', ' ', ' ', ' ', ' ', ' '))
     app.Contacts.submit_add_address()
