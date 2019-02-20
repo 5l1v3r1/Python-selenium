@@ -1,7 +1,7 @@
 from selenium.webdriver.support.select import Select
 
 
-class AdressHelper:
+class AddressHelper:
 
     def __init__(self, app):
         self.app = app
@@ -70,7 +70,7 @@ class AdressHelper:
     def edit_address(self, address):
         wd = self.app.wd
         #click on edit
-        wd.find_element_by_xpath("(.//*[normalize-space(text()) and normalize-space(.)='phoneqa'])[3]/following::img[2]").click()
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
         #Change text
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys(address.firstname)
@@ -93,5 +93,10 @@ class AdressHelper:
         wd.find_element_by_name("update").click()
 
     def open_edit_address(self):
+        wd = self.app.wd
+        wd.find_element_by_link_text("add new").click()
+
+
+    def add_image(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
