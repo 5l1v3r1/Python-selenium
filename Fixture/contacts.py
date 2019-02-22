@@ -72,25 +72,10 @@ class AddressHelper:
         #click on edit
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         #Change text
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(address.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(address.lastname)
-        wd.find_element_by_name("nickname").click()
-        wd.find_element_by_name("nickname").clear()
-        wd.find_element_by_name("nickname").send_keys(address.nickname)
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(address.location)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(address.email)
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(address.phone)
+        self.add_address(address)
         #Update
         wd.find_element_by_name("update").click()
+        self.return_home_page()
 
     def open_edit_address(self):
         wd = self.app.wd
