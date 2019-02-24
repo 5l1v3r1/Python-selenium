@@ -1,5 +1,5 @@
 class address:
-    def __init__(app, firstname, lastname, nickname, location, email, phone):
+    def __init__(app, firstname=None, lastname=None, nickname=None, location=None, email=None, phone=None):
         app.firstname = firstname
         app.lastname = lastname
         app.nickname = nickname

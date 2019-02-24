@@ -36,7 +36,7 @@ class SessionHelper:
     def ensure_Login(self, username, password):
         wd = self.app.wd
         if self.is_logged_in():
-            if self.is_logged_in_as():
+            if self.is_logged_in_as(username):
                 return
             else:
                 self.Logout()

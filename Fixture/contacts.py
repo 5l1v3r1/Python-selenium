@@ -8,24 +8,23 @@ class AddressHelper:
 
     def add_address(self, address):
         wd = self.app.wd
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(address.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(address.lastname)
-        wd.find_element_by_name("nickname").click()
-        wd.find_element_by_name("nickname").clear()
-        wd.find_element_by_name("nickname").send_keys(address.nickname)
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(address.location)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(address.email)
-        wd.find_element_by_name("mobile").click()
-        wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys(address.phone)
+        self.fill_address_form(address)
 
+    def fill_address_form(self, address):
+        wd = self.app.wd
+        self.type_address_none("firstname", address.firstname)
+        self.type_address_none("lastname",address.lastname)
+        self.type_address_none("nickname", address.nickname)
+        self.type_address_none("address", address.location)
+        self.type_address_none("email", address.email)
+        self.type_address_none("mobile", address.phone)
+
+    def type_address_none(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
 
     def return_home_page(self):
         wd = self.app.wd
@@ -67,21 +66,16 @@ class AddressHelper:
         wd.switch_to_alert().accept()
 
 
-    def edit_address(self, address):
+    def edit_address(self, new_address_data):
         wd = self.app.wd
+        wd.find_element_by_link_text("home").click()
         #click on edit
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         #Change text
-        self.add_address(address)
+        self.fill_address_form(new_address_data)
         #Update
         wd.find_element_by_name("update").click()
-        self.return_home_page()
 
     def open_edit_address(self):
-        wd = self.app.wd
-        wd.find_element_by_link_text("add new").click()
-
-
-    def add_image(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
