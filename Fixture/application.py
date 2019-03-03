@@ -11,7 +11,7 @@ class Application:
         self.wd = WebDriver()
         self.wd.implicitly_wait(3)
         self.session = SessionHelper(self)
-        self.Group = GroupHelper(self)
+        self.group = GroupHelper(self)
         self.Contacts = AddressHelper(self)
 
     def is_valid(self):

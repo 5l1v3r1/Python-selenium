@@ -1,11 +1,17 @@
 # -*- coding: utf-8 -*-
-from Model.group import group
+from Model.group import Group
 
-    
+
 def test_add_group(app):
-    app.Group.create(group(name="name", footer="footer", header="header"))
+    old_groups = app.group.get_group_list()
+    app.group.create(Group(name="name", footer="footer", header="header"))
+    new_groups = app.group.get_group_list()
+    assert len(old_groups) + 1 == len(new_groups)
+
 
 def test_add_empty_group(app):
-    app.Group.create(group(name=" ", footer=" ", header=" "))
-
+    old_groups = app.group.get_group_list()
+    app.group.create(Group(name=" ", footer=" ", header=" "))
+    new_groups = app.group.get_group_list()
+    assert len(old_groups) + 1 == len(new_groups)
 
