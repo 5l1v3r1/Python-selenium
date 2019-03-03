@@ -1,4 +1,5 @@
 from selenium.webdriver.support.select import Select
+from Model.address import address
 
 
 class AddressHelper:
@@ -74,3 +75,17 @@ class AddressHelper:
         wd = self.app.wd
         self.open_home_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+
+    def get_address_list(self):
+        wd = self.app.wd
+        self.open_home_page()
+        addresslist = []
+        for element in wd.find_elements_by_css_selector("tr[name='entry']"):
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            cells = element.find_elements_by_tag_name("td")
+            l_name = cells[1].text
+            f_name = cells[2].text
+            phone = cells[5].text
+            addresslist.append(address(firstname=f_name, lastname=l_name, phone=phone, id=id))
+        return addresslist
