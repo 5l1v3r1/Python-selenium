@@ -47,20 +47,33 @@ class AddressHelper:
         wd.find_element_by_xpath("(//input[@name='submit'])[2]").click()
 
 
-    def del_first_address(self):
+    def del_address_by_index(self, index):
         wd = self.app.wd
         #select first address
-        wd.find_element_by_name("selected[]").click()
+        self.select_some_address(index)
         #select delete button
         wd.find_element_by_xpath("//div[@class='left'][2]/input").click()
         #click ok on allert
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
+    def select_first_address(self):
+        wd = self.app.wd
+        self.select_some_address(0)
+        self.select_editsome_address(0)
 
-    def edit_address(self, new_address_data):
+    def select_some_address(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def select_editsome_address(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def edit_some_address(self, index, new_address_data):
         wd = self.app.wd
         self.return_home_page()
+        self.select_editsome_address(index)
         #click on edit
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         #Change text
@@ -92,6 +105,5 @@ class AddressHelper:
                 cells = element.find_elements_by_tag_name("td")
                 l_name = cells[1].text
                 f_name = cells[2].text
-                phone = cells[5].text
-                self.contact_cache.append(address(firstname=f_name, lastname=l_name, phone=phone, id=id))
+                self.contact_cache.append(address(firstname=f_name, lastname=l_name, id=id))
         return list(self.contact_cache)
