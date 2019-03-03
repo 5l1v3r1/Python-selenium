@@ -5,7 +5,7 @@ def test_del_address(app):
         app.Contacts.add_address(address(firstname="test2"))
     old_address = app.Contacts.get_address_list()
     app.Contacts.del_first_address()
+    assert len(old_address) - 1 == app.Contacts.count_address()
     new_address = app.Contacts.get_address_list()
-    assert len(old_address) - 1 == len(new_address)
     old_address[0:1] = []
-    assert sorted(old_address, key=address.id_or_max) == sorted(new_address, key=address.id_or_max)
+    assert old_address == new_address

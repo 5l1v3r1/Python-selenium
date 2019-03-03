@@ -7,8 +7,8 @@ def test_add_address(app):
     contact = address(firstname='firstname', lastname='lastname', nickname='nickname', location='location', email='email',
                 phone='phone')
     app.Contacts.add_address(contact)
+    assert len(old_address) + 1 == app.Contacts.count_address()
     new_address = app.Contacts.get_address_list()
-    assert len(old_address) + 1 == len(new_address)
     old_address.append(contact)
     assert sorted(old_address, key=address.id_or_max) == sorted(new_address, key=address.id_or_max)
 
