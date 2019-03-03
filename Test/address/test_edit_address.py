@@ -2,12 +2,16 @@ from Model.address import address
 
 
 def test_edit_address_name(app):
+    old_address = app.Contacts.get_address_list()
+    contact = address(firstname='firstnamedasdsa', lastname='fdsfsddfsds', phone='89887052920')
+    contact.id = old_address[0].id
     if app.Contacts.count_address() == 0:
         app.Contacts.add_address(address(firstname="test2"))
-    old_address = app.Contacts.get_address_list()
-    app.Contacts.edit_address(address(firstname='firstnamedasdsa'))
+    app.Contacts.edit_address(contact)
     new_address = app.Contacts.get_address_list()
     assert len(old_address) == len(new_address)
+    old_address[0] = contact
+    assert sorted(old_address, key=address.id_or_max) == sorted(new_address, key=address.id_or_max)
 
 #def test_edit_address_lastname(app):
    #if app.Contacts.count_address() == 0:
