@@ -7,9 +7,9 @@ def test_edit_some_address(app):
 
     old_address = app.Contacts.get_address_list()
     index = randrange(len(old_address))
-    contact = address(firstname='firstname', lastname='lastname')
+    contact = address(firstname='firstname', lastname='lastname', phone='234324342343243')
     contact.id = old_address[index].id
-    app.Contacts.edit_some_address(index, contact)
+    app.Contacts.edit_address(index, contact)
     assert len(old_address) == app.Contacts.count_address()
     new_address = app.Contacts.get_address_list()
     old_address[index] = contact

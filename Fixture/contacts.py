@@ -60,22 +60,26 @@ class AddressHelper:
     def select_first_address(self):
         wd = self.app.wd
         self.select_some_address(0)
-        self.select_editsome_address(0)
 
     def select_some_address(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
-    def select_editsome_address(self, index):
+    def editfirst_address(self):
         wd = self.app.wd
-        wd.find_elements_by_name("selected[]")[index].click()
+        self.editsome_address(0)
 
-    def edit_some_address(self, index, new_address_data):
+    def editsome_address(self, index):
+        wd = self.app.wd
+        row = wd.find_elements_by_name("entry")[index]
+        cells = row.find_elements_by_tag_name("td")[7]
+        cells.find_element_by_tag_name("a").click()
+        self.contact_cache = None
+
+    def edit_address(self, index, new_address_data):
         wd = self.app.wd
         self.return_home_page()
-        self.select_editsome_address(index)
-        #click on edit
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        self.editsome_address(index)
         #Change text
         self.fill_address_form(new_address_data)
         #Update
