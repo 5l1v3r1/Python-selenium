@@ -14,9 +14,12 @@ def random_string(prefix, maxlen):
 
 
 
-#listcompication
-testdata = [Group(name="", footer="", header="")]+[Group(name=random_string("name", 10), footer=random_string("footer", 20), header=random_string("header", 20))
-            for i in range(5)]
+#listcompication перебираем для каждого значения делаем комбинации
+testdata = [Group(name=name, footer=footer, header=header)
+            for name in ["", random_string("name", 10)]
+            for header in ["", random_string("header", 20)]
+            for footer in ["", random_string("footer", 20)]
+            ]
 
 @pytest.mark.parametrize("group", testdata, ids=[repr(x)for x in testdata])
 def test_add_group(app, group):
