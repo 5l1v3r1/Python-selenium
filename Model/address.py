@@ -1,7 +1,9 @@
 from sys import maxsize
 
 class address:
-    def __init__(self, firstname=None, lastname=None, nickname=None, location=None, email=None, homephone=None, workphone=None, mobilephone=None, secondphone=None,id=None):
+    def __init__(self, firstname=None, lastname=None, nickname=None,
+                 location=None, email=None, homephone=None, workphone=None,
+                 all_phones_from_homepage=None, mobilephone=None, secondphone=None,id=None):
         self.firstname = firstname
         self.lastname = lastname
         self.nickname = nickname
@@ -12,6 +14,7 @@ class address:
         self.mobilephone = mobilephone
         self.secondphone = secondphone
         self.id = id
+        self.all_phones_from_homepage = all_phones_from_homepage
 
 
     def __repr__(self):
