@@ -109,8 +109,11 @@ class AddressHelper:
                 cells = element.find_elements_by_tag_name("td")
                 l_name = cells[1].text
                 f_name = cells[2].text
+                Address = cells[3].text
                 all_phones = cells[5].text
-                self.contact_cache.append(address(firstname=f_name, lastname=l_name, id=id, all_phones_from_homepage = all_phones))
+                all_emails = cells[4].text
+                self.contact_cache.append(address(firstname=f_name, lastname=l_name, id=id, all_phones_from_homepage = all_phones,
+                                                  all_emails_from_homepage=all_emails, Address=Address))
         return list(self.contact_cache)
 
     def open_address_view_by_index(self, index):
@@ -130,9 +133,13 @@ class AddressHelper:
         workphone = wd.find_element_by_name("work").get_attribute("value")
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
         secondphone = wd.find_element_by_name("phone2").get_attribute("value")
+        email1 = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
+        Address = wd.find_element_by_name("address").get_attribute("value")
         return address(firstname=firstname, lastname=lastname, id=id, homephone=homephone,
                              mobilephone=mobilephone,
-                             workphone=workphone, secondphone=secondphone)
+                             workphone=workphone, secondphone=secondphone, email1=email1, email2=email2, email3=email3, Address=Address)
 
 
     def get_address_from_view_page(self, index):
@@ -146,5 +153,15 @@ class AddressHelper:
         return address(homephone=homephone,
                        mobilephone=mobilephone,
                        workphone=workphone, secondphone=secondphone)
+
+    def get_emails_from_view_page(self, index):
+        wd = self.app.wd
+        self.open_address_view_by_index(index)
+        for element in wd.find_elements_by_css_selector("div#content"):
+            cells = element.find_elements_by_tag_name("a")
+            email1 = cells[0].text
+            email2 = cells[1].text
+            email3 = cells[2].text
+            return address(email1=email1, email2=email2, email3=email3)
 
 

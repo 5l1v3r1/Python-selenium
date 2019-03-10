@@ -4,8 +4,7 @@ from Model.address import address
 
 def test_add_address(app):
     old_address = app.Contacts.get_address_list()
-    contact = address(firstname='firstname', lastname='lastname', nickname='nickname', location='location', email='email',
-                phone='phone')
+    contact = address(firstname='firstname', lastname='lastname')
     app.Contacts.add_address(contact)
     assert len(old_address) + 1 == app.Contacts.count_address()
     new_address = app.Contacts.get_address_list()
