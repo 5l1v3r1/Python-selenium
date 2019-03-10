@@ -25,10 +25,9 @@ class AddressHelper:
         wd = self.app.wd
         self.type_address_value("firstname", address.firstname)
         self.type_address_value("lastname", address.lastname)
-        self.type_address_value("nickname", address.nickname)
-        self.type_address_value("address", address.location)
-        self.type_address_value("email", address.email)
-        self.type_address_value("mobile", address.phone)
+        self.type_address_value("address", address.Address)
+        self.type_address_value("email", address.email1)
+        self.type_address_value("mobile", address.mobilephone)
 
     def type_address_value(self, field_name, text):
         wd = self.app.wd
