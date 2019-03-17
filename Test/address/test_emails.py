@@ -9,9 +9,9 @@ def test_emails_on_homepage(app):
 def test_emails_on_view_page(app):
     contact_from_view_page = app.Contacts.get_emails_from_view_page(0)
     contact_from_edit_page = app.Contacts.get_address_info_from_editpage(0)
-    assert contact_from_view_page.email1 == contact_from_edit_page.email1
-    assert contact_from_view_page.email2 == contact_from_edit_page.email2
-    assert contact_from_view_page.email3 == contact_from_edit_page.email3
+    assert contact_from_view_page.email1 == clear(contact_from_edit_page.email1)
+    assert contact_from_view_page.email2 == clear(contact_from_edit_page.email2)
+    assert contact_from_view_page.email3 == clear(contact_from_edit_page.email3)
 
 
 
