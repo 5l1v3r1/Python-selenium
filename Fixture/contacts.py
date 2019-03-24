@@ -1,5 +1,5 @@
 from selenium.webdriver.support.select import Select
-from Model.address import address
+from Model.address import Address
 import re
 
 class AddressHelper:
@@ -21,13 +21,13 @@ class AddressHelper:
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
             wd.get("http://localhost:8080/addressbook/")
 
-    def fill_address_form(self, address):
+    def fill_address_form(self, Address):
         wd = self.app.wd
-        self.type_address_value("firstname", address.firstname)
-        self.type_address_value("lastname", address.lastname)
-        self.type_address_value("address", address.Address)
-        self.type_address_value("email", address.email1)
-        self.type_address_value("mobile", address.mobilephone)
+        self.type_address_value("firstname", Address.firstname)
+        self.type_address_value("lastname", Address.lastname)
+        self.type_address_value("address", Address.address)
+        self.type_address_value("email", Address.email)
+        self.type_address_value("mobile", Address.mobile)
 
     def type_address_value(self, field_name, text):
         wd = self.app.wd
@@ -56,6 +56,15 @@ class AddressHelper:
         wd.switch_to_alert().accept()
         self.contact_cache = None
 
+    def del_address_by_id(self, id):
+        wd = self.app.wd
+        #select first address
+        self.select_address_by_id(id)
+        #select delete button
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        #wd.switch_to_alert().accept()
+        self.contact_cache = None
+
     def select_first_address(self):
         wd = self.app.wd
         self.select_some_address(0)
@@ -63,6 +72,7 @@ class AddressHelper:
     def select_some_address(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
+
 
     def editfirst_address(self):
         wd = self.app.wd
@@ -75,10 +85,24 @@ class AddressHelper:
         cells = row.find_elements_by_tag_name("td")[7]
         cells.find_element_by_tag_name("a").click()
 
+    def select_address_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+
     def edit_address(self, index, new_address_data):
         wd = self.app.wd
         self.return_home_page()
         self.editsome_address(index)
+        #Change text
+        self.fill_address_form(new_address_data)
+        #Update
+        wd.find_element_by_name("update").click()
+        self.contact_cache = None
+
+    def edit_address_by_id(self, id, new_address_data):
+        wd = self.app.wd
+        self.return_home_page()
+        self.select_address_by_id(id)
         #Change text
         self.fill_address_form(new_address_data)
         #Update
@@ -108,11 +132,10 @@ class AddressHelper:
                 cells = element.find_elements_by_tag_name("td")
                 l_name = cells[1].text
                 f_name = cells[2].text
-                Address = cells[3].text
+                address = cells[3].text
                 all_phones = cells[5].text
                 all_emails = cells[4].text
-                self.contact_cache.append(address(firstname=f_name, lastname=l_name, id=id, all_phones_from_homepage = all_phones,
-                                                  all_emails_from_homepage=all_emails, Address=Address))
+                self.contact_cache.append(Address(id=id, firstname=f_name, lastname=l_name, all_phones_from_home_page=all_phones, all_emails_from_home_page=all_emails, address=address))
         return list(self.contact_cache)
 
     def open_address_view_by_index(self, index):
@@ -128,30 +151,27 @@ class AddressHelper:
         firstname = wd.find_element_by_name("firstname").get_attribute("value")
         lastname = wd.find_element_by_name("lastname").get_attribute("value")
         id = wd.find_element_by_name("id").get_attribute("value")
-        homephone = wd.find_element_by_name("home").get_attribute("value")
-        workphone = wd.find_element_by_name("work").get_attribute("value")
-        mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
-        secondphone = wd.find_element_by_name("phone2").get_attribute("value")
-        email1 = wd.find_element_by_name("email").get_attribute("value")
+        home = wd.find_element_by_name("home").get_attribute("value")
+        work = wd.find_element_by_name("work").get_attribute("value")
+        mobile = wd.find_element_by_name("mobile").get_attribute("value")
+        phone2 = wd.find_element_by_name("phone2").get_attribute("value")
+        address = wd.find_element_by_name("address").get_attribute("value")
+        email = wd.find_element_by_name("email").get_attribute("value")
         email2 = wd.find_element_by_name("email2").get_attribute("value")
         email3 = wd.find_element_by_name("email3").get_attribute("value")
-        Address = wd.find_element_by_name("address").get_attribute("value")
-        return address(firstname=firstname, lastname=lastname, id=id, homephone=homephone,
-                             mobilephone=mobilephone,
-                             workphone=workphone, secondphone=secondphone, email1=email1, email2=email2, email3=email3, Address=Address)
+        return Address(id=id, firstname=firstname, lastname=lastname, home=home, mobile=mobile,
+                       work=work, phone2=phone2, address=address, email=email, email2=email2, email3=email3)
 
 
     def get_address_from_view_page(self, index):
         wd = self.app.wd
         self.open_address_view_by_index(index)
         text = wd.find_element_by_id("content").text
-        homephone = re.search("H: (.*)", text).group(1)
-        workphone = re.search("W: (.*)", text).group(1)
-        mobilephone = re.search("M: (.*)", text).group(1)
-        secondphone = re.search("P: (.*)", text).group(1)
-        return address(homephone=homephone,
-                       mobilephone=mobilephone,
-                       workphone=workphone, secondphone=secondphone)
+        home = re.search("H: (.*)", text).group(1)
+        mobile = re.search("M: (.*)", text).group(1)
+        work = re.search("W: (.*)", text).group(1)
+        phone2 = re.search("P: (.*)", text).group(1)
+        return Address(home=home, work=work, mobile=mobile, phone2=phone2)
 
     def get_emails_from_view_page(self, index):
         wd = self.app.wd
@@ -161,6 +181,6 @@ class AddressHelper:
             email1 = cells[0].text
             email2 = cells[1].text
             email3 = cells[2].text
-            return address(email1=email1, email2=email2, email3=email3)
+            return Address(email=email1, email2=email2, email3=email3)
 
 

@@ -1,31 +1,40 @@
 from sys import maxsize
 
-class address:
-    def __init__(self, firstname=None, lastname=None, email1=None, email2=None, email3=None, homephone=None, workphone=None,
-                 all_phones_from_homepage=None, mobilephone=None, secondphone=None,id=None , all_emails_from_homepage=None, Address=None):
+class Address:
+    def __init__(self, id = None, firstname = None, lastname = None, home = None, mobile = None, work = None, phone2 = None,
+                 all_phones_from_home_page = None, email = None, address = None, email2 = None, email3 = None, all_emails_from_home_page = None):
+        self.id = id
         self.firstname = firstname
         self.lastname = lastname
-        self.email1 = email1
+        self.home = home
+        self.mobile = mobile
+        self.work = work
+        self.phone2 = phone2
+        self.address = address
+        self.email = email
         self.email2 = email2
         self.email3 = email3
-        self.all_emails_from_homepage = all_emails_from_homepage
-        self.homephone = homephone
-        self.workphone = workphone
-        self.mobilephone = mobilephone
-        self.secondphone = secondphone
-        self.id = id
-        self.Address = Address
-        self.all_phones_from_homepage = all_phones_from_homepage
-
+        self.all_emails_from_home_page = all_emails_from_home_page
+        self.all_phones_from_home_page = all_phones_from_home_page
 
     def __repr__(self):
-        return "%s:%s:%s:%s:%s:%s" % (self.id, self.firstname, self.lastname, self.Address, self.email1, self.mobilephone)
+        return "%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s" % (self.id, self.firstname, self.lastname, self.address, self.home, self.mobile, self.work, self.phone2, self.address, self.email, self.email2, self.email3)
 
     def __eq__(self, other):
-        return (self.id is None or other.id is None or self.id == other.id) and self.firstname == other.firstname and self.lastname == other.lastname
+        return (self.id is None or other.id is None or self.id == other.id) \
+               or self.lastname == other.lastname \
+               or self.firstname == other.firstname \
+               or self.address == other.address \
+               or self.email == other.email \
+               or self.email2 == other.email2 \
+               or self.email3 == other.email3 \
+               or self.home == other.home \
+               or self.work == other.work_phone \
+               or self.mobile == other.mobile \
+               or self.phone2 == other.phone2 \
 
-    def id_or_max(gr):
-        if gr.id:
-            return int(gr.id)
+    def id_or_max(self):
+        if self.id:
+            return int(self.id)
         else:
             return maxsize
