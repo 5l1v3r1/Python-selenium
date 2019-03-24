@@ -107,6 +107,7 @@ class AddressHelper:
         self.fill_address_form(new_address_data)
         #Update
         wd.find_element_by_name("update").click()
+        self.return_home_page()
         self.contact_cache = None
 
 
@@ -178,9 +179,9 @@ class AddressHelper:
         self.open_address_view_by_index(index)
         for element in wd.find_elements_by_css_selector("div#content"):
             cells = element.find_elements_by_tag_name("a")
-            email1 = cells[0].text
+            email = cells[0].text
             email2 = cells[1].text
             email3 = cells[2].text
-            return Address(email=email1, email2=email2, email3=email3)
+            return Address(email=email, email2=email2, email3=email3)
 
 
