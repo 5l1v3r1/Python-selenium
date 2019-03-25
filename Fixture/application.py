@@ -1,7 +1,7 @@
 from selenium import webdriver
 from Fixture.session import SessionHelper
 from Fixture.group import GroupHelper
-from Fixture.contacts import AddressHelper
+from Fixture.contacts import ContactHelper
 
 
 class Application:
@@ -19,7 +19,7 @@ class Application:
         self.wd.implicitly_wait(10)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
-        self.Contacts = AddressHelper(self)
+        self.Contacts = ContactHelper(self)
         self.base_Url = base_Url
 
     def is_valid(self):

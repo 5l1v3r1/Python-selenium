@@ -1,11 +1,17 @@
 {
   "web": {
-    "baseUrl": "http://localhost:8080/addressbook/",
+    "baseUrl": "http://localhost/addressbook/",
     "username": "admin",
     "password": "secret"
 },
 
   "db": {
+    "host": "localhost",
+    "name": "addressbook",
+    "user": "root",
+    "password": ""
+},
+  "orm": {
     "host": "localhost",
     "name": "addressbook",
     "user": "root",

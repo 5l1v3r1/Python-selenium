@@ -1,6 +1,6 @@
 import pymysql.cursors
 from Model.group import Group
-from Model.address import Address
+from Model.contact import Contact
 class DbFixture:
     def __init__(self, host, name, user, password):
         self.user = user
@@ -29,12 +29,12 @@ class DbFixture:
             cursor.execute("select id, firstname, lastname, address, email, mobile from addressbook where deprecated ='0000-00-00 00:00:00'")
             for row in cursor:
                 (id, firstname, lastname, address, email, mobile) = row
-                list.append(Address(id=str(id), firstname=firstname, lastname=lastname, address=address, mobile=mobile, email=email))
+                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname, address=address, mobile=mobile, email=email))
         finally:
             cursor.close()
         return list
 
-    def get_contact_list_with_merged_emails_and_phones(self):
+    def get_contact_full_list(self):
         list = []
         cursor = self.connection.cursor()
         try:
@@ -42,7 +42,7 @@ class DbFixture:
             for row in cursor:
                 (id, firstname, lastname, address, home, mobile, work, phone2, email, email2, email3) = row
                 list.append(
-                    Address(id=str(id), firstname=firstname, lastname=lastname, address=address, all_phones_from_home_page=home + mobile + work + phone2, all_emails_from_home_page=email + email2 + email3))
+                    Contact(id=str(id), firstname=firstname, lastname=lastname, address=address, all_phones_from_home_page=home + mobile + work + phone2, all_emails_from_home_page=email + email2 + email3))
         finally:
             cursor.close()
         return list
