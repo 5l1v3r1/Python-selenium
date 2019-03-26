@@ -189,3 +189,12 @@ class ContactHelper:
         wd = self.app.wd
         self.select_contact_by_id(id)
         wd.find_element_by_name("add").click()
+        self.return_to_grope_page_after_add_contact()
+
+
+
+
+    def return_to_grope_page_after_add_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_css_selector("i>a").click()
+
