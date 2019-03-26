@@ -1,4 +1,6 @@
 from Model.group import Group
+import random
+from selenium.webdriver.support.ui import Select
 
 class GroupHelper:
 
@@ -20,8 +22,14 @@ class GroupHelper:
         self.fill_group_from(group)
         # submit group creation
         wd.find_element_by_name("submit").click()
-        self.return_to_group_page()
+        self.return_home_page()
         self.group_cache = None
+
+    def return_home_page(self):
+        wd = self.app.wd
+        if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
+            wd.find_element_by_link_text("home").click()
+
 
     def fill_group_from(self, group):
         self.change_field_value("group_name", group.name)
@@ -126,5 +134,10 @@ class GroupHelper:
                 id = element.find_element_by_name("selected[]").get_attribute("value")
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
+
+
+    def select_group_from_home_page(self, id):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//form[2]/div[@class='right']/select/option[@value='%s']" % id).click()
 
 

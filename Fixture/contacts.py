@@ -87,7 +87,7 @@ class ContactHelper:
 
     def select_contact_by_id(self, id):
         wd = self.app.wd
-        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
 
     def edit_contact(self, index, new_address_data):
         wd = self.app.wd
@@ -164,7 +164,7 @@ class ContactHelper:
                        work=work, phone2=phone2, address=address, email=email, email2=email2, email3=email3)
 
 
-    def get_contact_from_view_page(self, index):
+    def get_phone_from_view_page(self, index):
         wd = self.app.wd
         self.open_contact_view_by_index(index)
         text = wd.find_element_by_id("content").text
@@ -185,3 +185,7 @@ class ContactHelper:
             return Contact(email=email, email2=email2, email3=email3)
 
 
+    def add_contact_in_group(self, id):
+        wd = self.app.wd
+        self.select_contact_by_id(id)
+        wd.find_element_by_name("add").click()

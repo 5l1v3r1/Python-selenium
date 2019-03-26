@@ -42,7 +42,23 @@ class DbFixture:
             for row in cursor:
                 (id, firstname, lastname, address, home, mobile, work, phone2, email, email2, email3) = row
                 list.append(
-                    Contact(id=str(id), firstname=firstname, lastname=lastname, address=address, all_phones_from_home_page=home + mobile + work + phone2, all_emails_from_home_page=email + email2 + email3))
+                    Contact(id=str(id), firstname=firstname, lastname=lastname, address=address, email=email,
+                            email2=email2, email3=email3,
+                            home=home, mobile=mobile, work=work, phone2=phone2))
+        finally:
+            cursor.close()
+        return list
+
+    def get_contact_phone_and_mail_list(self):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute(
+                "select id, home, mobile, work, phone2, email, email2, email3 from addressbook")
+            for row in cursor:
+                (id, home, mobile, work, phone2, email, email2, email3) = row
+                list.append(
+                    Contact(id=str(id), all_phones_from_home_page=home + mobile + work + phone2, all_emails_from_home_page=email + email + email2 + email3))
         finally:
             cursor.close()
         return list
