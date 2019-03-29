@@ -97,13 +97,17 @@ class ContactHelper:
 
     def select_contact_by_id(self, id):
         wd = self.app.wd
+        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+
+    def select_contact_by_id_edit(self, id):
+        wd = self.app.wd
         wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
 
     def select_contact_by_index(self, index):
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
-    def edit_contact(self, index, new_address_data):
+    def edit_contact(self, index, new_address_data): 
         wd = self.app.wd
         self.return_home_page()
         self.editsome_contact(index)

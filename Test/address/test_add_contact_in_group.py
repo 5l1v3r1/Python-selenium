@@ -19,8 +19,8 @@ def test_add_contact_in_group(app, orm, db):
     app.group.select_group_from_home_page(selected_group.id)
     app.Contacts.add_contact_in_group(selected_contact.id)
     new_contact_in_group = orm.get_contacts_in_group(selected_group)
-    contact_after_add = len(new_contact_in_group)
-    assert countact_before_adding + 1 == contact_after_add
+    count_members_in_group_after_adding_member = len(new_contact_in_group)
+    assert countact_before_adding + 1 == count_members_in_group_after_adding_member
 
     #new_contact_list = orm.get_contacts_in_group(old_group_list)
     #count_contacts_after_add = len(new_contact_list)
