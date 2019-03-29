@@ -1,6 +1,6 @@
 import re
 #обратная проверка (склейка)
-def test_phones_on_homepage(app):
+def test_phones_on_homepage(app, db):
     contact_from_home_page = app.Contacts.get_contact_list()[0]
     contact_from_edit_page = app.Contacts.get_contact_info_from_editpage(0)
     assert contact_from_home_page.all_phones_from_home_page == merge_phone_on_home_page(contact_from_edit_page)

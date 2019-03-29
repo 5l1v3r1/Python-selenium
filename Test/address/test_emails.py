@@ -1,7 +1,7 @@
 import re
 
 def test_emails_on_homepage(app):
-    contact_from_home_page = app.Contacts.get_contact_list[0]
+    contact_from_home_page = app.Contacts.get_contact_list()[0]
     contact_from_edit_page = app.Contacts.get_contact_info_from_editpage(0)
     assert contact_from_home_page.all_emails_from_home_page == merge_emails_on_home_page(contact_from_edit_page)
 

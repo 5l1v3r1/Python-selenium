@@ -65,6 +65,16 @@ class ContactHelper:
         #wd.switch_to_alert().accept()
         self.contact_cache = None
 
+    def del_contact_by_id_with_allert(self, id):
+        wd = self.app.wd
+        #select first address
+        self.select_contact_by_id(id)
+        #select delete button
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.return_home_page()
+        self.contact_cache = None
+
     def select_first_contact(self):
         wd = self.app.wd
         self.select_some_contact(0)
@@ -87,7 +97,11 @@ class ContactHelper:
 
     def select_contact_by_id(self, id):
         wd = self.app.wd
-        wd.find_element_by_css_selector("input[value='%s']" % id).click()
+        wd.find_element_by_css_selector("a[href='edit.php?id=%s']" % id).click()
+
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
 
     def edit_contact(self, index, new_address_data):
         wd = self.app.wd
@@ -198,3 +212,15 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_css_selector("i>a").click()
 
+    def open_group_page_with_contact(self, selected_group):
+        wd = self.app.wd
+        self.open_home_page()
+        wd.find_element_by_name("group").click()
+        Select(wd.find_element_by_name("group")).select_by_visible_text(selected_group)
+
+
+    def delete_contact_from_group(self, selected_group, contact_index):
+        wd = self.app.wd
+        self.open_group_page_with_contact(selected_group)
+        self.select_contact_by_index(contact_index)
+        wd.find_element_by_name("remove").click()
