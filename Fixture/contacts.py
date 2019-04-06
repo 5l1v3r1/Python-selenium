@@ -19,7 +19,7 @@ class ContactHelper:
     def open_home_page(self):
         wd = self.app.wd
         if not (wd.current_url.endswith("/addressbook/") and len(wd.find_elements_by_name("Send e-Mail")) > 0):
-            wd.get("http://localhost/addressbook/")
+            wd.get("http://localhost:8080/addressbook/")
 
     def fill_contact_form(self, Address):
         wd = self.app.wd
