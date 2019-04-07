@@ -24,7 +24,7 @@ def test_assert_all_contacts_with_db (app, db):
         assert contacts_from_home_page_sorted[x].all_phones_from_home_page == merge_phones_like_on_home_page(contacts_from_db_sorted[x])
 
 
-
+ 
 
 def clear(s):
     return re.sub('[() -]', " ", s)
@@ -40,11 +40,3 @@ def merge_emails_like_on_home_page(contact):
                             map(lambda x: clear(x),
                                 filter(lambda x: x is not None,
                                        [contact.email, contact.email2, contact.email3]))))
-
-
-
-def merge_fio_like_on_home_page(contact):
-    return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: clear(x),
-                                filter(lambda x: x is not None,
-                                       [contact.firstname, contact.lastname, contact.address, ]))))
