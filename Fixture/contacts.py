@@ -120,7 +120,7 @@ class ContactHelper:
     def edit_contact_by_id(self, id, new_address_data):
         wd = self.app.wd
         self.return_home_page()
-        self.select_contact_by_id(id)
+        self.select_contact_by_id_edit(id)
         #Change text
         self.fill_contact_form(new_address_data)
         #Update
