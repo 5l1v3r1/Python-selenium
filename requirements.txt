@@ -4,4 +4,4 @@ selenium
 jsonpickle
 pony
 PyMySQL
-pytest-allure-adaptor
+pytest-allure-adaptor 
