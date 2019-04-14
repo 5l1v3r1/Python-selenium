@@ -1,0 +1,95 @@
+{
+  "uid" : "cf4e2895d2616f4a",
+  "name" : "test_add_group[None:namesfiIQtCn:headerOD:footerUoMRvnxzIfXEssIMgmK]",
+  "title" : "Test add group [None:namesfiIQtCn:headerOD:footerUoMRvnxzIfXEssIMgmK]",
+  "time" : {
+    "start" : 1555250093395,
+    "stop" : 1555250094953,
+    "duration" : 1558
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "34df8e31b01e881a",
+    "name" : "group.test_add_group",
+    "title" : "Test add group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1555250093618,
+      "stop" : 1555250093620,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When i add the group to the list",
+    "title" : "When i add the group to the list",
+    "time" : {
+      "start" : 1555250093620,
+      "stop" : 1555250094950,
+      "duration" : 1330
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list equal to the old group list with the added group",
+    "title" : "Then the new group list equal to the old group list with the added group",
+    "time" : {
+      "start" : 1555250094950,
+      "stop" : 1555250094952,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "group.test_add_group"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

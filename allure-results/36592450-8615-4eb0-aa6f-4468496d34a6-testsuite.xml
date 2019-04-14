@@ -1,0 +1,43 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250072742" stop="1555250079652">
+  <name>test_del_address</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250072742" status="passed" stop="1555250079652">
+      <name>test_del_some_address</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250072998" status="passed" stop="1555250073000">
+          <name>Given a old contact list</name>
+          <title>Given a old contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250073000" status="passed" stop="1555250076467">
+          <name>When i delete contact to the list</name>
+          <title>When i delete contact to the list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250076467" status="passed" stop="1555250076469">
+          <name>Given a new contact list</name>
+          <title>Given a new contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250076469" status="passed" stop="1555250079651">
+          <name>Then the new contact list equal to the old contact list with the delete contact</name>
+          <title>Then the new contact list equal to the old contact list with the delete contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,110 @@
+{
+  "uid" : "a27325a391ec35c0",
+  "name" : "test_delete_some_group",
+  "title" : "Test delete some group",
+  "time" : {
+    "start" : 1555250099286,
+    "stop" : 1555250102925,
+    "duration" : 3639
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1ce14e9a533c7569",
+    "name" : "group.test_del_group",
+    "title" : "Test del group"
+  },
+  "steps" : [ {
+    "name" : "Given a old group list",
+    "title" : "Given a old group list",
+    "time" : {
+      "start" : 1555250099377,
+      "stop" : 1555250099379,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "delete group by id",
+    "title" : "delete group by id",
+    "time" : {
+      "start" : 1555250099379,
+      "stop" : 1555250102879,
+      "duration" : 3500
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new group list",
+    "title" : "Given a new group list",
+    "time" : {
+      "start" : 1555250102880,
+      "stop" : 1555250102883,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list equal to the old group list with the edit group",
+    "title" : "Then the new group list equal to the old group list with the edit group",
+    "time" : {
+      "start" : 1555250102883,
+      "stop" : 1555250102924,
+      "duration" : 41
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-name",
+    "value" : "group.test_del_group"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

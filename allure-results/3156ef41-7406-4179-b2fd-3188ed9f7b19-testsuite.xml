@@ -1,0 +1,59 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250079654" stop="1555250087264">
+  <name>test_delete_contact_from_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250079654" status="failed" stop="1555250087264">
+      <name>test_delete_contact_in_group</name>
+      <failure>
+        <message>IndexError: list index out of range</message>
+        <stack-trace>app = &lt;Fixture.application.Application object at 0x03C753F0&gt;, orm = &lt;Fixture.orm.ORMFixture object at 0x03C9BB90&gt;, db = &lt;Fixture.db.DbFixture object at 0x03D4DAF0&gt;
+
+    def test_delete_contact_in_group(app, orm, db):
+        if len(db.get_contact_list()) == 0:
+            app.Contacts.add_contact(Contact(firstname="test2"))
+        if len(db.get_group_list()) == 0:
+            app.group.create(Group(name="testName"))
+        group_list = orm.get_group_list()
+        contact_list = orm.get_contact_list()
+        selected_group = random.choice(group_list)
+        contact_list_from_group = orm.get_contacts_in_group(selected_group)
+        if len(contact_list_from_group) == 0:
+            selected_contact = random.choice(contact_list)
+            app.group.select_group_from_home_page(selected_group.id)
+            app.Contacts.add_contact_in_group(selected_contact.id)
+            contact_list_from_group = orm.get_contacts_in_group(selected_group)
+        count_contact_before_add = len(contact_list_from_group)
+        selected_contact = random.choice(contact_list_from_group)
+        app.Contacts.open_group_page_with_contact(selected_group.name)
+        contact_index = contact_list_from_group.index(selected_contact)
+&gt;       app.Contacts.delete_contact_from_group(selected_group.name, contact_index)
+
+test\address\test_delete_contact_from_group.py:23: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+Fixture\contacts.py:229: in delete_contact_from_group
+    self.select_contact_by_index(contact_index)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;Fixture.contacts.ContactHelper object at 0x03C75830&gt;, index = 0
+
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+&gt;       wd.find_elements_by_name("selected[]")[index].click()
+E       IndexError: list index out of range
+
+Fixture\contacts.py:108: IndexError</stack-trace>
+      </failure>
+      <attachments>
+        <attachment source="433a3edd-3175-46b2-aa27-2532d5f04936-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

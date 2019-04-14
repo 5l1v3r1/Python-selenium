@@ -1,0 +1,50 @@
+{
+  "uid" : "3434d081c92056fe",
+  "name" : "test_assert_all_contacts_with_db",
+  "title" : "Test assert all contacts with db",
+  "time" : {
+    "start" : 1555250065301,
+    "stop" : 1555250069313,
+    "duration" : 4012
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "d01e290e3be64eaa",
+    "name" : "test_all_contacts_on_HP_with_db",
+    "title" : "Test all contacts on HP with db"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_all_contacts_on_HP_with_db"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

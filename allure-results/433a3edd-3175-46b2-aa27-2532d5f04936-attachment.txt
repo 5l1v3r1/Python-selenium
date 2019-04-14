@@ -1,0 +1,31 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_id` = %s
+['330']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[330]
+
+SELECT `id`, `firstname`, `lastname`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[202]
+
+COMMIT
+RELEASE CONNECTION

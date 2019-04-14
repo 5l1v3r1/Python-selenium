@@ -1,0 +1,69 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250064276" stop="1555250065298">
+  <name>test_add_contact_in_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250064276" status="passed" stop="1555250065298">
+      <name>test_add_contact_in_group</name>
+      <attachments>
+        <attachment source="258b29bd-d974-4c56-8507-b06a6d5abe36-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250064538" status="passed" stop="1555250064545">
+          <name>Given a group list</name>
+          <title>Given a group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064545" status="passed" stop="1555250064555">
+          <name>Given a contact_not_in_group</name>
+          <title>Given a contact_not_in_group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064555" status="passed" stop="1555250064561">
+          <name>Given a contact_in_group</name>
+          <title>Given a contact_in_group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064561" status="passed" stop="1555250064561">
+          <name>check contact list before add</name>
+          <title>check contact list before add</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064566" status="passed" stop="1555250064791">
+          <name>when select group list from group page</name>
+          <title>when select group list from group page</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064791" status="passed" stop="1555250065288">
+          <name>when added contact in group</name>
+          <title>when added contact in group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250065288" status="passed" stop="1555250065296">
+          <name>given a new contact list in group</name>
+          <title>given a new contact list in group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250065296" status="passed" stop="1555250065296">
+          <name>then equal contacts before add with after add</name>
+          <title>then equal contacts before add with after add</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

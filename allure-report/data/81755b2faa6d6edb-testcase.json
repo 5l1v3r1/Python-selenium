@@ -1,0 +1,50 @@
+{
+  "uid" : "81755b2faa6d6edb",
+  "name" : "test_edit_some_address",
+  "title" : "Test edit some address",
+  "time" : {
+    "start" : 1555250087267,
+    "stop" : 1555250091774,
+    "duration" : 4507
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "8aa1dafab4839e34",
+    "name" : "test_edit_address",
+    "title" : "Test edit address"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_edit_address"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

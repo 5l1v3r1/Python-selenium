@@ -1,0 +1,110 @@
+{
+  "uid" : "4697871947673046",
+  "name" : "test_edit_some_group",
+  "title" : "Test edit some group",
+  "time" : {
+    "start" : 1555250102927,
+    "stop" : 1555250106972,
+    "duration" : 4045
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "1bc8240b78ed4ff0",
+    "name" : "group.test_edit_group",
+    "title" : "Test edit group"
+  },
+  "steps" : [ {
+    "name" : "Given a old group list",
+    "title" : "Given a old group list",
+    "time" : {
+      "start" : 1555250103033,
+      "stop" : 1555250103036,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When edit group",
+    "title" : "When edit group",
+    "time" : {
+      "start" : 1555250103036,
+      "stop" : 1555250106967,
+      "duration" : 3931
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new group list",
+    "title" : "Given a new group list",
+    "time" : {
+      "start" : 1555250106967,
+      "stop" : 1555250106971,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list equal to the old group list with the edit group",
+    "title" : "Then the new group list equal to the old group list with the edit group",
+    "time" : {
+      "start" : 1555250106971,
+      "stop" : 1555250106971,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "group.test_edit_group"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

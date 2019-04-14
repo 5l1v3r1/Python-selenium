@@ -1,0 +1,116 @@
+{
+  "uid" : "e1a179d3ad75935b",
+  "name" : "test_add_address[None:firstnameeQ:lastnameuSvAOfmyWYq:AddressUI:None:mobilephoneuYOGOvGPLBQMLrG:None:None:AddressUI:emailDYLJqntcmrsuDEEGgz:None:None]",
+  "title" : "Test add address [None:firstnameeQ:lastnameuSvAOfmyWYq:AddressUI:None:mobilephoneuYOGOvGPLBQMLrG:None:None:AddressUI:emailDYLJqntcmrsuDEEGgz:None:None]",
+  "time" : {
+    "start" : 1555250040458,
+    "stop" : 1555250053743,
+    "duration" : 13285
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "4276123fe8b5608b",
+    "name" : "test_add_address",
+    "title" : "Test add address"
+  },
+  "steps" : [ {
+    "name" : "Given a old contact list",
+    "title" : "Given a old contact list",
+    "time" : {
+      "start" : 1555250048598,
+      "stop" : 1555250048603,
+      "duration" : 5
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When add contact",
+    "title" : "When add contact",
+    "time" : {
+      "start" : 1555250048603,
+      "stop" : 1555250053737,
+      "duration" : 5134
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new contact list",
+    "title" : "Given a new contact list",
+    "time" : {
+      "start" : 1555250053737,
+      "stop" : 1555250053741,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list equal to the old contact list with the added contact",
+    "title" : "Then the new contact list equal to the old contact list with the added contact",
+    "time" : {
+      "start" : 1555250053741,
+      "stop" : 1555250053741,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "5c72006b-8ae1-4931-b8f5-d8dd88c783b9-attachment.txt",
+    "type" : "text/plain",
+    "size" : 366,
+    "uid" : "fa080969d10dadd9"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_add_address"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

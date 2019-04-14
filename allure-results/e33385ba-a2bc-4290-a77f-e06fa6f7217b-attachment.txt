@@ -1,0 +1,14 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION

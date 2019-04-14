@@ -1,0 +1,37 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250098222" stop="1555250099284">
+  <name>group.test_db_matches_ui</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250098222" status="passed" stop="1555250099284">
+      <name>test_group_list</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250098468" status="passed" stop="1555250099280">
+          <name>Given a ui group list</name>
+          <title>Given a ui group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250099280" status="passed" stop="1555250099283">
+          <name>Given a db group list</name>
+          <title>Given a db group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250099283" status="passed" stop="1555250099283">
+          <name>Equal ui list and db list</name>
+          <title>Equal ui list and db list</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

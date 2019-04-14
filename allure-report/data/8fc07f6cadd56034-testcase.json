@@ -1,0 +1,95 @@
+{
+  "uid" : "8fc07f6cadd56034",
+  "name" : "test_group_list",
+  "title" : "Test group list",
+  "time" : {
+    "start" : 1555249275550,
+    "stop" : 1555249276557,
+    "duration" : 1007
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "2b3552973c27d178",
+    "name" : "group.test_db_matches_ui",
+    "title" : "Test db matches ui"
+  },
+  "steps" : [ {
+    "name" : "Given a ui group list",
+    "title" : "Given a ui group list",
+    "time" : {
+      "start" : 1555249275708,
+      "stop" : 1555249276554,
+      "duration" : 846
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a db group list",
+    "title" : "Given a db group list",
+    "time" : {
+      "start" : 1555249276554,
+      "stop" : 1555249276556,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Equal ui list and db list",
+    "title" : "Equal ui list and db list",
+    "time" : {
+      "start" : 1555249276556,
+      "stop" : 1555249276556,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "9328-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "group.test_db_matches_ui"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

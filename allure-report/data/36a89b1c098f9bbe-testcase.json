@@ -1,0 +1,176 @@
+{
+  "uid" : "36a89b1c098f9bbe",
+  "name" : "test_add_contact_in_group",
+  "title" : "Test add contact in group",
+  "time" : {
+    "start" : 1555250064276,
+    "stop" : 1555250065298,
+    "duration" : 1022
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 8
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "b8d9a89d7a8e03e9",
+    "name" : "test_add_contact_in_group",
+    "title" : "Test add contact in group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1555250064538,
+      "stop" : 1555250064545,
+      "duration" : 7
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a contact_not_in_group",
+    "title" : "Given a contact_not_in_group",
+    "time" : {
+      "start" : 1555250064545,
+      "stop" : 1555250064555,
+      "duration" : 10
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a contact_in_group",
+    "title" : "Given a contact_in_group",
+    "time" : {
+      "start" : 1555250064555,
+      "stop" : 1555250064561,
+      "duration" : 6
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "check contact list before add",
+    "title" : "check contact list before add",
+    "time" : {
+      "start" : 1555250064561,
+      "stop" : 1555250064561,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "when select group list from group page",
+    "title" : "when select group list from group page",
+    "time" : {
+      "start" : 1555250064566,
+      "stop" : 1555250064791,
+      "duration" : 225
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "when added contact in group",
+    "title" : "when added contact in group",
+    "time" : {
+      "start" : 1555250064791,
+      "stop" : 1555250065288,
+      "duration" : 497
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "given a new contact list in group",
+    "title" : "given a new contact list in group",
+    "time" : {
+      "start" : 1555250065288,
+      "stop" : 1555250065296,
+      "duration" : 8
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "then equal contacts before add with after add",
+    "title" : "then equal contacts before add with after add",
+    "time" : {
+      "start" : 1555250065296,
+      "stop" : 1555250065296,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "258b29bd-d974-4c56-8507-b06a6d5abe36-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1705,
+    "uid" : "7423f883a4b503b9"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-name",
+    "value" : "test_add_contact_in_group"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

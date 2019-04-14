@@ -1,0 +1,43 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250102927" stop="1555250106972">
+  <name>group.test_edit_group</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250102927" status="passed" stop="1555250106972">
+      <name>test_edit_some_group</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250103033" status="passed" stop="1555250103036">
+          <name>Given a old group list</name>
+          <title>Given a old group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250103036" status="passed" stop="1555250106967">
+          <name>When edit group</name>
+          <title>When edit group</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250106967" status="passed" stop="1555250106971">
+          <name>Given a new group list</name>
+          <title>Given a new group list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250106971" status="passed" stop="1555250106971">
+          <name>Then the new group list equal to the old group list with the edit group</name>
+          <title>Then the new group list equal to the old group list with the edit group</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,0 +1,110 @@
+{
+  "uid" : "dfebe8b070f6c548",
+  "name" : "test_del_some_address",
+  "title" : "Test del some address",
+  "time" : {
+    "start" : 1555250072742,
+    "stop" : 1555250079652,
+    "duration" : 6910
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "31695c9d8f72cd9f",
+    "name" : "test_del_address",
+    "title" : "Test del address"
+  },
+  "steps" : [ {
+    "name" : "Given a old contact list",
+    "title" : "Given a old contact list",
+    "time" : {
+      "start" : 1555250072998,
+      "stop" : 1555250073000,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When i delete contact to the list",
+    "title" : "When i delete contact to the list",
+    "time" : {
+      "start" : 1555250073000,
+      "stop" : 1555250076467,
+      "duration" : 3467
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a new contact list",
+    "title" : "Given a new contact list",
+    "time" : {
+      "start" : 1555250076467,
+      "stop" : 1555250076469,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list equal to the old contact list with the delete contact",
+    "title" : "Then the new contact list equal to the old contact list with the delete contact",
+    "time" : {
+      "start" : 1555250076469,
+      "stop" : 1555250079651,
+      "duration" : 3182
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_del_address"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}

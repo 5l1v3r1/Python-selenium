@@ -1,0 +1,123 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1555250040458" stop="1555250064270">
+  <name>test_add_address</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1555250040458" status="passed" stop="1555250053743">
+      <name>test_add_address[None:firstnameeQ:lastnameuSvAOfmyWYq:AddressUI:None:mobilephoneuYOGOvGPLBQMLrG:None:None:AddressUI:emailDYLJqntcmrsuDEEGgz:None:None]</name>
+      <attachments>
+        <attachment source="5c72006b-8ae1-4931-b8f5-d8dd88c783b9-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250048598" status="passed" stop="1555250048603">
+          <name>Given a old contact list</name>
+          <title>Given a old contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250048603" status="passed" stop="1555250053737">
+          <name>When add contact</name>
+          <title>When add contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250053737" status="passed" stop="1555250053741">
+          <name>Given a new contact list</name>
+          <title>Given a new contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250053741" status="passed" stop="1555250053741">
+          <name>Then the new contact list equal to the old contact list with the added contact</name>
+          <title>Then the new contact list equal to the old contact list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1555250053751" status="passed" stop="1555250059039">
+      <name>test_add_address[None:firstnamewaragYFi:lastnamesBHJvjsRFYUgqmTWD:Address:None:mobilephoneBZXhOpljqIMZrMyw:None:None:Address:emailVSYZbAMhfRdSApPa:None:None]</name>
+      <attachments>
+        <attachment source="132b51fb-fa7b-4163-a7c9-a32e4ed87435-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250053984" status="passed" stop="1555250053987">
+          <name>Given a old contact list</name>
+          <title>Given a old contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250053987" status="passed" stop="1555250059034">
+          <name>When add contact</name>
+          <title>When add contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250059034" status="passed" stop="1555250059038">
+          <name>Given a new contact list</name>
+          <title>Given a new contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250059038" status="passed" stop="1555250059038">
+          <name>Then the new contact list equal to the old contact list with the added contact</name>
+          <title>Then the new contact list equal to the old contact list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1555250059043" status="passed" stop="1555250064270">
+      <name>test_add_address[None:firstnameD:lastnameiEDORDXmbmqVIMI:AddressIOLwIJZl:None:mobilephonePbKKBQBSbZW:None:None:AddressIOLwIJZl:emailaTZUfH:None:None]</name>
+      <attachments>
+        <attachment source="e33385ba-a2bc-4290-a77f-e06fa6f7217b-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="9268-MainThread"/>
+        <label name="host" value="Илья-ПК"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1555250059301" status="passed" stop="1555250059305">
+          <name>Given a old contact list</name>
+          <title>Given a old contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250059305" status="passed" stop="1555250064265">
+          <name>When add contact</name>
+          <title>When add contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064265" status="passed" stop="1555250064269">
+          <name>Given a new contact list</name>
+          <title>Given a new contact list</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1555250064269" status="passed" stop="1555250064269">
+          <name>Then the new contact list equal to the old contact list with the added contact</name>
+          <title>Then the new contact list equal to the old contact list with the added contact</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

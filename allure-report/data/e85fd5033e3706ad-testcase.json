@@ -1,0 +1,50 @@
+{
+  "uid" : "e85fd5033e3706ad",
+  "name" : "test_contact_list",
+  "title" : "Test contact list",
+  "time" : {
+    "start" : 1555250069315,
+    "stop" : 1555250072740,
+    "duration" : 3425
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "cdd3efc3a602b731",
+    "name" : "test_db_matches_ui_contacts",
+    "title" : "Test db matches ui contacts"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test_db_matches_ui_contacts"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "thread",
+    "value" : "9268-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "Илья-ПК"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  } ],
+  "parameters" : [ ]
+}
